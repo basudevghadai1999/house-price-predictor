@@ -28,4 +28,4 @@ loaded_model = pickle.load(open('boston_models.sav', 'rb'))
 
 if st.button("Submit"):
     result = loaded_model.predict([[crim,zn,indus,chas,nox,rm,age,dis,rad,tax,ptratio,black,istat]])
-    st.write("The Estimated Price is ",result)
+    st.write("The Estimated Price is ",int(result))
